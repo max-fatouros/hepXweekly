@@ -2,7 +2,7 @@
 git clone https://github.com/ShreyasBakare/hepXweekly.git
 pip install feedparser
 ```
-Then either you can add 
+Then you can add 
 ```
 alias hepxweekly="python3 ~/work/hepXweekly/hep_ex_weekly.py"
 ```
