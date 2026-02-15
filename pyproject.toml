@@ -17,11 +17,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
 ]
 dependencies = [
+    "feedparser",
 ]
 version = '0.0.0'
 
 [project.optional-dependencies]
 dev = [
+    "pre-commit",
 ]
 
 
@@ -44,7 +46,8 @@ multi_line_output = 3
 force_grid_wrap = 2
 include_trailing_comma = true
 
-# [project.urls]
+[project.urls]
+Repository = "https://github.com/ShreyasBakare/hepXweekly"
 
 [project.scripts]
-"hep-ex-weekly" = "hep_ex_weekly.__main__:main"
+"hepxweekly" = "hep_ex_weekly.__main__:main"
