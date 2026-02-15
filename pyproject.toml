@@ -1,0 +1,53 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#a-full-example
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hep-ex-weekly"
+requires-python = ">=3.8"
+authors = [
+    { name = "Shreyas Bakare"},
+    { name = "Max Fatouros", email = "git.q13kx@slmail.me"},
+]
+description = "sort and open latest hep-ex arXiv papers from the terminal"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "feedparser",
+]
+version = '0.0.0'
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+]
+
+
+[tool.autopep8]
+# Let isort handle imports
+ignore = [
+    "E401",
+    "E402",
+]
+
+[tool.setuptools.packages.find]
+include = ["hep_ex_weekly", "hep_ex_weekly.*"]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+
+[tool.isort]
+multi_line_output = 3
+force_grid_wrap = 2
+include_trailing_comma = true
+
+[project.urls]
+Repository = "https://github.com/ShreyasBakare/hepXweekly"
+
+[project.scripts]
+"hepxweekly" = "hep_ex_weekly.__main__:main"
