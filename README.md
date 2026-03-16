@@ -3,7 +3,7 @@
 
 ## Installation
 ```
-pip install git+git@github.com:ShreyasBakare/hepXweekly.git
+pip install git+ssh://git@github.com/ShreyasBakare/hepXweekly.git
 ```
 
 ## Usage
